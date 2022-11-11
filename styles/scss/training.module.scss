@@ -1,0 +1,185 @@
+.training {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #1e2a3a;
+    padding: 5rem 2.5rem 120px;
+
+    @media (max-width: 640px) {
+        padding: 2.5rem 20px;
+        align-items: flex-start;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media (max-width: 640px) {
+            text-align: left;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: rgba(235, 240, 248, 0.8);
+
+        @media (max-width: 640px) {
+            font-size: 16px;
+            text-align: left;
+        }
+    }
+
+    &__contentWrapper {
+        width: 100%;
+        display: flex;
+        max-width: 870px;
+        margin-top: 4.5rem;
+        margin-bottom: 2rem;
+        border-radius: 12px;
+        background: #0f161e;
+        box-shadow: 24px 20px 40px rgba(0, 0, 0, 0.04);
+
+        @media (max-width: 912px) {
+            flex-flow: column;
+        }
+
+        @media (max-width: 640px) {
+            margin-top: 2rem;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__content {
+        width: 50%;
+        padding: 2.5rem;
+
+        @media (max-width: 912px) {
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            padding: 20px 20px 1.5rem;
+        }
+
+        &::after {
+            content: "";
+            width: 56px;
+            height: 56px;
+            display: block;
+            margin-top: 2.5rem;
+            background: url(../../public/images/ic-play.svg);
+
+            @media (max-width: 640px) {
+                display: none;
+            }
+        }
+    }
+
+    &__contentTag {
+        display: block;
+        padding: 4px 12px;
+        width: fit-content;
+        margin-bottom: 2.5rem;
+        align-self: flex-start;
+
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.1);
+
+        @media (max-width: 640px) {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 120%;
+            padding: 0.5rem 12px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__contentTitle {
+        color: #ebf0f8;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 130%;
+        margin-bottom: 1rem;
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__contentDesc {
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(235, 240, 248, 0.8);
+
+        @media (max-width: 640px) {
+            line-height: 150%;
+            letter-spacing: 0.04em;
+        }
+    }
+
+    &__picWrapper {
+        width: 50%;
+        padding: 20px 20px 20px 15px;
+
+        @media (max-width: 912px) {
+            padding: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            padding: 0 20px 20px;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 12px;
+
+        @media (max-width: 912px) {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            height: 201px;
+            display: block;
+
+            &::after {
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 50%;
+                margin: 0 auto;
+                transform: translateY(-50%);
+                position: absolute;
+                content: "";
+                width: 56px;
+                height: 56px;
+                display: block;
+                background: url(../../public/images/ic-play.svg);
+            }
+        }
+    }
+
+    &__detailsBtn {
+        max-width: 870px;
+        box-shadow: none;
+        background: #0f161e;
+    }
+}

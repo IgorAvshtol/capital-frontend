@@ -1,0 +1,40 @@
+{
+  "name": "capital",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3302",
+    "build": "next build",
+    "start": "next start -- -p 3300"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.16",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
+    "@react-pdf/renderer": "^2.0.18",
+    "cookie-cutter": "^0.2.0",
+    "google-map-react": "^2.1.10",
+    "graphql": "^15.5.0",
+    "html-pdf": "^3.0.1",
+    "html-to-image": "^1.7.0",
+    "jspdf": "^2.3.1",
+    "moment": "^2.29.1",
+    "next": "^11.1.2",
+    "next-seo": "^4.26.0",
+    "nextjs-progressbar": "0.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^6.0.0",
+    "react-moment": "^1.1.1",
+    "react-slick": "^0.28.1",
+    "react-yandex-maps": "^4.6.0",
+    "sass": "^1.32.8",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "cross-env": "^7.0.3"
+  },
+  "browser": {
+    "html-pdf": false
+  }
+}

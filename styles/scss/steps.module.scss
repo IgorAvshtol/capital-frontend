@@ -1,0 +1,67 @@
+.stepsPage {
+    @media (max-width: 1024px) {
+        background: #1e2a3a;
+    }
+
+    &_category {
+        background: transparent !important;
+    }
+}
+
+.steps {
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 1024px) {
+        flex-flow: column;
+    }
+}
+
+.step {
+    width: 100%;
+
+    & + & {
+        margin-left: 30px;
+
+        @media (max-width: 1024px) {
+            margin-top: 2rem;
+            margin-left: initial;
+        }
+    }
+
+    &__number {
+        display: block;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 110%;
+        color: #ffc75a;
+        margin-bottom: 2.5rem;
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 0.04em;
+        color: #ebf0f8;
+        margin-bottom: 1rem;
+
+        @media (max-width: 640px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: rgba(235, 240, 248, 0.8);
+    }
+}

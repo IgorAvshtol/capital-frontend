@@ -1,0 +1,206 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    background: transparent;
+
+    &__main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 28px 40px;
+        border-bottom: 0.5px solid rgba(235, 240, 248, 0.2);
+
+        @media (max-width: 640px) {
+            padding: 20px;
+        }
+    }
+
+    &__logo {
+        width: 327px;
+        height: 3rem;
+        position: relative;
+
+        @media (max-width: 1130px) {
+            display: none;
+        }
+
+        &_mob {
+            width: 152px;
+            height: 40px;
+            display: none;
+            position: relative;
+
+            @media (max-width: 1130px) {
+                display: block;
+            }
+        }
+    }
+
+    &__mainLinks {
+        display: flex;
+        align-items: inherit;
+        margin-left: auto;
+
+        @media (max-width: 1130px) {
+            display: none;
+        }
+    }
+
+    &__tel {
+        color: #ebf0f8;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-right: 2.5rem;
+    }
+
+    &__btn {
+        padding: 12px 1.5rem;
+
+        & + & {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__navWrapper {
+        width: 100%;
+        padding: 0 calc((100% - 1050px) / 2);
+        border-bottom: 0.5px solid rgba(235, 240, 248, 0.2);
+
+        @media (max-width: 1130px) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__navItem {
+        padding: 20px 0;
+        cursor: pointer;
+        color: #ebf0f8;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        position: relative;
+
+        &::before {
+            left: 0;
+            right: 0;
+            top: calc(100% - 1px);
+            height: 2px;
+            content: "";
+            display: none;
+            position: absolute;
+            background-color: #ffc75a;
+        }
+
+        & + & {
+            margin-left: 2.5rem;
+        }
+
+        &:hover::before,
+        &_active::before {
+            display: block;
+        }
+
+        &_drop {
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: "";
+                width: 6px;
+                height: 6px;
+                margin-left: 12px;
+                background: url(../../public/images/ic-arrow-down.svg) no-repeat center;
+            }
+        }
+    }
+
+    &__mobLinks {
+        display: none;
+        align-items: inherit;
+        margin-left: auto;
+
+        @media (max-width: 1130px) {
+            display: flex;
+        }
+    }
+
+    &__mobTel {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        border-radius: 50%;
+        background-color: #ffc75a;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../../public/images/ic-tel.svg);
+    }
+
+    &__mobMenu {
+        width: 22px;
+        height: 22px;
+        display: block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../../public/images/ic-menu.svg);
+    }
+
+    &__mobTel + &__mobMenu {
+        margin-left: 2rem;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #1e2a3a;
+    padding: 3.5rem calc((100% - 1050px) / 2);
+    box-shadow: 24px 20px 40px rgba(0, 0, 0, 0.04);
+
+    &__wrap {
+        gap: 30px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__nav {
+        width: 100%;
+        display: block;
+    }
+
+    &__navTitle {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.12em;
+        color: rgba(235, 240, 248, 0.8);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__navItem {
+        display: block;
+        font-size: 16px;
+        line-height: 254%;
+        color: #ebf0f8;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
